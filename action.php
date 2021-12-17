@@ -1,3 +1,19 @@
+<?php
+include('db.php');
+$economy = new mysqli($ip, $user, $pass, "economyapi", $port);
+$mod = new mysqli($ip, $user, $pass, "cucumber", $port);
+$ranks = new mysqli($ip, $user, $pass, "perms", $port);
+
+$playerName = $_POST['query'];
+$economyQuery = "SELECT money from user_money WHERE username = '$playerName';";
+
+$modgetPlayerIDQuery = "SELECT id from cucumber_players WHERE name = '$playerName';";
+$modgetPlayerID = (int)$mod->query($modgetPlayerIDQuery)->fetch_array()[0];
+$modQuery = "SELECT count(id) from cucumber_warnings WHERE player_id = '$modgetPlayerID';";
+
+$ranksQuery = "SELECT userGroup from players WHERE userName = '$playerName';";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,9 +101,10 @@
                                                      data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                                      aria-expanded="false">Open Source</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-undefined"><a
-                                class="text-secondary dropdown-item text-primary display-4" href="opensource.html#top">About
-                            Open Sorce</a><a class="text-secondary show dropdown-item text-primary display-4"
-                                             href="pmnsop.html#top">PMnS as Open Source</a></div>
+                                    class="text-secondary dropdown-item text-primary display-4"
+                                    href="opensource.html#top">About
+                                Open Sorce</a><a class="text-secondary show dropdown-item text-primary display-4"
+                                                 href="pmnsop.html#top">PMnS as Open Source</a></div>
                     </li>
                     <li class="nav-item"><a class="nav-link link text-secondary show text-primary display-4"
                                             href="find.php#top">🔎 Find Player</a></li>
@@ -108,13 +125,15 @@
         <div class="row">
             <div class="col-12 col-lg-5">
                 <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Stats for
-                    &lt;PlayerName&gt;</strong></h1>
+                        <?php echo $playerName; ?></strong></h1>
 
-                <p class="mbr-text mbr-fonts-style display-7">Name: &lt;playername&gt;<br>Perms/Rank: &lt;rank&gt;<br>Money:
-                    P$CONTENT$lt;money&gt;<br>Warnings: &lt;warnings&gt;&nbsp;<warns></warns>
-                    <br>First Join: &lt;firstjoin&gt;<br>Last Join: &lt;lastjoin&gt;<br></p>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="page6.html#header7-v">Find
-                    Another</a></div>
+                <p class="mbr-text mbr-fonts-style display-7">Name: <?php echo $playerName; ?>
+                    <br>Perms/Rank: <?php echo (string)$ranks->query($ranksQuery)->fetch_array()[0]; ?><br>Money:
+                    P$<?php echo $economy->query($economyQuery)->fetch_array()[0]; ?>
+                    <br>Warnings: <?php echo (int)$mod->query($modQuery)->fetch_array()[0]; ?>
+                    <br></p>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="find.php#header7-v">Find
+                        Another</a></div>
             </div>
         </div>
     </div>
@@ -137,10 +156,10 @@
                     </li>
                     <li class="foot-menu-item mbr-fonts-style display-7"><a href="find.php"
                                                                             class="text-white text-primary">Find
-                        Player</a></li>
+                            Player</a></li>
                     <li class="foot-menu-item mbr-fonts-style display-7"><a href="opensource.html"
                                                                             class="text-white text-primary">Open
-                        Source</a></li>
+                            Source</a></li>
                     <li class="foot-menu-item mbr-fonts-style display-7"><a href="https://forms.gle/ZdVyKmQSrUp7sEW77"
                                                                             class="text-white"
                                                                             target="_blank">Volunteer</a></li>

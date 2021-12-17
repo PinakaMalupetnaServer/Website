@@ -7,7 +7,7 @@
     <meta name="generator" content="Mobirise v5.5.2, mobirise.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="shortcut icon" href="assets/images/pmns-128x128.png" type="image/x-icon">
-    <meta name="description" content="Welcome to PinakaMalupetnaser">
+    <meta name="description" content="Welcome to PinakaMalupetnaserver">
 
 
     <title>PMnS</title>
@@ -86,9 +86,10 @@
                                                      data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                                      aria-expanded="false">Open Source</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-undefined"><a
-                                class="text-secondary dropdown-item text-primary display-4" href="opensource.html#top">About
-                            Open Sorce</a><a class="text-secondary show dropdown-item text-primary display-4"
-                                             href="pmnsop.html#top">PMnS as Open Source</a></div>
+                                    class="text-secondary dropdown-item text-primary display-4"
+                                    href="opensource.html#top">About
+                                Open Sorce</a><a class="text-secondary show dropdown-item text-primary display-4"
+                                                 href="pmnsop.html#top">PMnS as Open Source</a></div>
                     </li>
                     <li class="nav-item"><a class="nav-link link text-secondary show text-primary display-4"
                                             href="find.php#top">🔎 Find Player</a></li>
@@ -107,15 +108,16 @@
         <div class="row">
             <div class="content-wrap">
                 <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-3 display-1"><strong>Play More,<br>New
-                    Satisfaction!</strong></h1>
+                        Satisfaction!</strong></h1>
 
                 <p class="mbr-fonts-style mbr-text mbr-white mb-3 display-7">
                     PinakaMalupetnaServer assures that you can <strong>Play More, and be Satisfied </strong>with the
                     offered games within the Server!</p>
 
                 <div class="mbr-section-btn"><a class="btn btn-secondary display-4" href="about.html">About Us</a> <a
-                        class="btn btn-secondary display-4"
-                        href="http://gsrv.princepines.digital/PMnSOpeningPack.mcpack">Download Opening Pack</a></div>
+                            class="btn btn-secondary display-4"
+                            href="http://gsrv.princepines.digital/PMnSOfficialPack.mcpack">Download Christmas Pack</a>
+                </div>
             </div>
         </div>
     </div>
@@ -128,7 +130,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
                 <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-3 display-1"><strong>Play More with
-                    Games</strong></h1>
+                        Games</strong></h1>
 
                 <p class="mbr-text mbr-fonts-style mbr-white display-5">Play with variety of games like
                     <strong>PotPVP</strong>,<strong>&nbsp;Survival Mode</strong>,<strong>&nbsp;and more!</strong><br>Currently
@@ -138,10 +140,11 @@
                         $sm = json_decode(file_get_contents('https://api.mcsrvstat.us/bedrock/2/gsrv.princepines.digital:19130'));
                         $total = $main->players->online + $sm->players->online;
                         echo $total;
-                    ?>
-                        Online Players playing PMnS!</strong></p>
+                        ?>
+                        Online Players playing PMnS!</strong><br>Play with us!</p><h5 style="color:white;">IP:
+                    gsrv.princepines.digital<br><br>Port: 19132 (Default)</h5>
                 <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="games.html">Learn
-                    More</a></div>
+                        More</a></div>
             </div>
         </div>
     </div>
@@ -164,10 +167,10 @@
                     </li>
                     <li class="foot-menu-item mbr-fonts-style display-7"><a href="find.php"
                                                                             class="text-white text-primary">Find
-                        Player</a></li>
+                            Player</a></li>
                     <li class="foot-menu-item mbr-fonts-style display-7"><a href="opensource.html"
                                                                             class="text-white text-primary">Open
-                        Source</a></li>
+                            Source</a></li>
                     <li class="foot-menu-item mbr-fonts-style display-7"><a href="https://forms.gle/ZdVyKmQSrUp7sEW77"
                                                                             class="text-white"
                                                                             target="_blank">Volunteer</a></li>

@@ -85,9 +85,10 @@
                                                      data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                                      aria-expanded="false">Open Source</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-undefined"><a
-                                class="text-secondary dropdown-item text-primary display-4" href="opensource.html#top">About
-                            Open Sorce</a><a class="text-secondary show dropdown-item text-primary display-4"
-                                             href="pmnsop.html#top">PMnS as Open Source</a></div>
+                                    class="text-secondary dropdown-item text-primary display-4"
+                                    href="opensource.html#top">About
+                                Open Sorce</a><a class="text-secondary show dropdown-item text-primary display-4"
+                                                 href="pmnsop.html#top">PMnS as Open Source</a></div>
                     </li>
                     <li class="nav-item"><a class="nav-link link text-secondary show text-primary display-4"
                                             href="find.php#top">🔎 Find Player</a></li>
@@ -108,9 +109,14 @@
                 <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>Find Player</strong></h1>
 
                 <p class="mbr-text mbr-fonts-style display-7">
-                    Currently Not Available for now.</p>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="#">Find
-                    Player</a></div>
+                <form action="action.php" method="post" class="form-group">
+                    <input type="text" name="query" placeholder="Enter Player Name (non-case sensitive)"
+                           class="form-control"/>
+                </p>
+                <div class="mbr-section-btn mt-3">
+                    <input type="submit" value="Find Player" class="btn btn-secondary display-4"/>
+                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -133,10 +139,10 @@
                     </li>
                     <li class="foot-menu-item mbr-fonts-style display-7"><a href="find.php"
                                                                             class="text-white text-primary">Find
-                        Player</a></li>
+                            Player</a></li>
                     <li class="foot-menu-item mbr-fonts-style display-7"><a href="opensource.html"
                                                                             class="text-white text-primary">Open
-                        Source</a></li>
+                            Source</a></li>
                     <li class="foot-menu-item mbr-fonts-style display-7"><a href="https://forms.gle/ZdVyKmQSrUp7sEW77"
                                                                             class="text-white"
                                                                             target="_blank">Volunteer</a></li>
